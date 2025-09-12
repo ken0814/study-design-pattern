@@ -25,12 +25,20 @@ func (u *User) DeepClone() *User {
 	return &clone
 }
 
+func (u *User) setName(name string) {
+	u.Name = name
+}
+
+func (u *User) setEmail(email string) {
+	u.Email = email
+}
+
 func main() {
 	fmt.Println("Prototype Pattern 原形模式")
 	original := &User{Name: "ken", Age: 26, Email: "ken@example.com"}
 	clone := original.Clone()
-	clone.Name = "joyce"
-	clone.Email = "joyce@example.com"
+	clone.setName("joyce")
+	clone.setEmail("joyce@example.com")
 	fmt.Printf("Original point:%p\nOriginal value: %+v\n", original, original)
 	fmt.Printf("Clone point:%p\nClone value: %+v\n", clone, clone)
 }
