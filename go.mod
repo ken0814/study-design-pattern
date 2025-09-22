@@ -1,0 +1,3 @@
+module study-design-pattern
+
+go 1.24.0
