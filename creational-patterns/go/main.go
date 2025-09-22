@@ -19,12 +19,6 @@ func (u *User) Clone() *User {
 	}
 }
 
-// 深拷貝
-func (u *User) DeepClone() *User {
-	clone := *u
-	return &clone
-}
-
 func (u *User) setName(name string) {
 	u.Name = name
 }
